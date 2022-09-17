@@ -25,7 +25,7 @@ namespace MVC_APP.Controllers
             _logger.LogWarning("Mensaje warning");
             _logger.LogError("Mensaje error");
             _logger.LogCritical("Mensaje critico" + apellido);
-            ViewBag.Apellido = "Garcia";
+            ViewBag.Apellido = "García";
             var projects = projectsRepository.GetProjects().Take(3).ToList();
             var model = new HomeIndexViewModel() { Projects = projects };
             return View(model);
