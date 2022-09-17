@@ -1,0 +1,71 @@
+﻿
+.profile-pic {
+    width: 15rem;
+    border-radius: 100%;
+}
+.background {
+    background-color: #512bd4;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.net-logo-container {
+    width:15rem;
+}
+.net-logo {
+    width: inherit;
+}
+.welcome {
+    color:white;
+    text-align:center;
+}
+.header {
+    font-weight:bold;
+}
+.skills-container {
+    margin-top: -2rem;
+    width: 100%;
+}
+.back-front-container {
+    justify-content: center;
+}
+.skills {
+    box-shadow: 0 5px 5px 0 gray;
+    width: 10rem;
+}
+@media screen and (min-width:425px) {
+    .skills {
+        width:13rem;
+    }
+}
+@media screen and (min-width:768px) {
+    .skills {
+        width:20rem;
+    }
+}
+@media screen and (min-width:840px) {
+    .skills {
+        width:24rem;
+    }
+}
+@media screen and (min-width:1024px) {
+    .skills {
+        width:20rem;
+    }
+}
+.sk1 {
+    border-radius: 15px 0 0 15px;
+}
+.sk2 {
+    border-radius: 0 15px 15px 0;
+}
+.skills ul {
+list-style:none;
+padding-left:0;
+}
+.portfolio-item {
+    font-size: 3rem;
+    color: #512bd4;
+}

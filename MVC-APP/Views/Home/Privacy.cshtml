@@ -1,0 +1,48 @@
+﻿@model Intereses;
+
+@{
+    ViewData["Title"] = "Informacion personal";
+}
+
+@{
+    string AñadirUnaLetra(string Valor)
+    {
+        return Valor + "a";
+    }
+}
+@{
+    string HoraActual = DateTime.Now.ToString("hh");
+    string HoraActualLetras = DateTime.Now.ToString("tt");
+}
+@{
+    var nombres = new List<string>() { "Felipe", "Juan", "Pepe" };
+}
+<h1>@ViewData["Title"]</h1>
+<p>Me gusta la @Model.Interes1.ToUpper() y el @Model.Interes2.ToLower()</p>
+<p>Me gusta comer @AñadirUnaLetra("piñ")</p>
+<div>
+    @if(@Model.Interes1 == "Natacion")
+    {
+        <p>Un consejo para nadadores, nunca salgas a nadar solo</p>
+    } else
+    {
+        <p>No tengo consejos para no nadadores</p>
+    }
+</div>
+
+@if(@HoraActualLetras == "a. m.")
+{
+    <p>Buenos dias</p>
+}else if(@HoraActualLetras == "p. m." && Convert.ToInt32(@HoraActual) < 7) {
+    <p>Buenas tardes</p>
+} else if (@HoraActualLetras == "p. m." && Convert.ToInt32(@HoraActual) >= 7)
+{
+    <p>Buenas noches</p>
+}
+
+<ul>
+    @foreach(var nombre in nombres)
+    {
+        <li>@nombre</li>
+    }
+</ul>

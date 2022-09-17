@@ -1,0 +1,9 @@
+﻿@model IEnumerable<ProjectViewModel>
+@{
+    ViewData["Title"] = "Projects";
+}
+<div class="container">
+    <h1>My Projects</h1>
+    <p>Here you'll find all my projects</p>
+</div>
+<partial name="_ProjectsList.cshtml" model="Model"/>
